@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 import { Intro } from './src/Components/SplashScreen/intro';
 import { Start } from './src/Components/StartScreen/start';
+import { SignUpAs } from './src/Components/SignUpAs/SignUpAs';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -35,6 +36,9 @@ export default class App extends Component {
     break;
     case 'Start':
     appComponent=<Start switchScreen={this.switchScreen.bind(this)}/>
+    break;
+    case 'SignUpAs':
+    appComponent=<SignUpAs switchScreen={this.switchScreen.bind(this)}/>
     break;
     }
     this.setState({renderScreen:appComponent});

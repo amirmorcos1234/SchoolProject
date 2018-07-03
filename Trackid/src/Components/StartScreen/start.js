@@ -2,7 +2,9 @@ import React,{ Component } from "react";
 import { View,StyleSheet,Image } from "react-native";
 import { Container,Header,Content, Left, Body, Right, Title, Text, Button } from "native-base";
 export class Start extends Component{
-    
+    renderSignUp(){
+        this.props.switchScreen('SignUpAs');
+    }
     render(){
         return(
             <Container
@@ -11,21 +13,27 @@ export class Start extends Component{
             <View style={styles.LogoView}>
             <Image
             source={require('../../images/Start_Screen/TK.png')}
-            minWidth={165.13}
-            minHeight={146.99}
             />
             <Image
             source={require('../../images/Start_Screen/Paragraph.png')}
             style={{top:10}}
-            minWidth={162}
-            minHeight={41}
+            
             />
             
             </View>
-            <View >
-            <Button style={{flex:1,justifyContent:'center',alignContent:'center'}}>
-                <Text>
+            <View style={styles.ButtonsView} >
+            <Button
+            onPress={()=>this.renderSignUp()}
+            style={[styles.Buttons,styles.SignUpButton]}>
+                <Text style={styles.SignUpText}>
                     SIGN UP
+                    </Text>
+                </Button>
+                <Button
+                transparent
+            style={[styles.Buttons,styles.LoginButton]}>
+                <Text style={{color:'white'}}>
+                    LOG IN
                     </Text>
                 </Button>
             </View>
@@ -43,6 +51,27 @@ const styles=StyleSheet.create({
     flex:0.7,
     justifyContent:'center',
     alignItems:'center'
+  },
+  ButtonsView:{
+    left:18
+  },
+  Buttons:{
+    justifyContent:'center',
+    alignContent:'center',
+    width:'90%'
+  }
+  ,
+  SignUpButton:{
+      backgroundColor:'white',
+  },
+  SignUpText:{
+    color:'#167ED8'
+  },
+  LoginButton:{
+      top:20,
+      borderRadius:4,
+      borderWidth:2,
+      borderColor:'white'
   }
 }
 )

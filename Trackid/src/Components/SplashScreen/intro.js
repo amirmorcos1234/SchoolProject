@@ -3,7 +3,7 @@ import { View,StyleSheet,Image } from "react-native";
 import { Container,Header,Content, Left, Body, Right, Title } from "native-base";
 export class Intro extends Component{
     componentWillMount(){
-        setInterval(()=>{
+        setTimeout(()=>{
            this.props.switchScreen('Start'); 
         },2000)
     }
