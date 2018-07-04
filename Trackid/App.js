@@ -20,6 +20,7 @@ import { SignIn } from './src/Components/SignIn/signIn';
 import { ResetPassword } from './src/Components/ResetPassword/resetPassword';
 import { ResetEmail } from './src/Components/ResetPassword/resetEmail';
 import { ConfirmPassword } from './src/Components/ResetPassword/confirmPassword';
+import { ErrorScreen } from './src/Components/Error/errorScreen';
 
 
 export default class App extends Component {
@@ -27,7 +28,7 @@ export default class App extends Component {
   componentDidMount(){
     this.switchScreen();
   }
-  switchScreen(screen='ConfirmPassword'){
+  switchScreen(screen='ErrorScreen'){
     let appComponent=null;
     switch(screen){
     case 'Splash':
@@ -50,6 +51,9 @@ export default class App extends Component {
     break;
     case 'SignIn':
     appComponent=<SignIn switchScreen={this.switchScreen.bind(this)}/>
+    break;
+    case 'ErrorScreen':
+    appComponent=<ErrorScreen switchScreen={this.switchScreen.bind(this)}/>
     break;
     // case 'PersonalInfo':
     // appComponent=<PersonalInfo switchScreen={this.switchScreen.bind(this)}/>
