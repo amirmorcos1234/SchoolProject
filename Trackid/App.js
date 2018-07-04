@@ -40,7 +40,11 @@ export default class App extends Component {
     case 'SignUpAs':
     appComponent=<SignUpAs switchScreen={this.switchScreen.bind(this)}/>
     break;
+    case 'personalInfo':
+    appComponent=<personalInfo switchScreen={this.switchScreen.bind(this)}/>
+    break;
     }
+
     this.setState({renderScreen:appComponent});
 
   }
