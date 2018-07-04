@@ -14,6 +14,7 @@ import {
 import { Intro } from './src/Components/SplashScreen/intro';
 import { Start } from './src/Components/StartScreen/start';
 import { SignUpAs } from './src/Components/SignUpAs/SignUpAs';
+import { SignUpTeacher } from './src/Components/SignUpTeacher/signUpTeacher';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -28,7 +29,7 @@ export default class App extends Component {
   componentDidMount(){
     this.switchScreen();
   }
-  switchScreen(screen='SignUpAs'){
+  switchScreen(screen='Splash'){
     let appComponent=null;
     switch(screen){
     case 'Splash':
@@ -40,8 +41,13 @@ export default class App extends Component {
     case 'SignUpAs':
     appComponent=<SignUpAs switchScreen={this.switchScreen.bind(this)}/>
     break;
+<<<<<<< HEAD
     case 'personalInfo':
     appComponent=<personalInfo switchScreen={this.switchScreen.bind(this)}/>
+=======
+    case 'SignUpTeacher':
+    appComponent=<SignUpTeacher switchScreen={this.switchScreen.bind(this)}/>
+>>>>>>> 040b0aeb30261a76689163e4ab8281ffd8ac5a96
     break;
     }
 
