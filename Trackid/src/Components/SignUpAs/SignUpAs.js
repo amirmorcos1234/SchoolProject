@@ -1,9 +1,12 @@
 import React,{ Component } from "react";
-import { View,StyleSheet,Image } from "react-native";
+import { View,StyleSheet,Image,TouchableOpacity } from "react-native";
 import { Card } from "react-native-elements";
 import { Container,Header,Content, Left, Body, Right, Title, Text, Button, Icon, Thumbnail } from "native-base";
 
 export class SignUpAs extends Component{
+  renderSignUpTeacher(){
+    this.props.switchScreen('SignUpTeacher');
+  }
 render(){
     return(
     <Container
@@ -18,11 +21,7 @@ render(){
           <Body>
             <Title style={[styles.IconColor,styles.Title]}>Sign up As?</Title>
           </Body>
-          <Right>
-            <Button transparent>
-              <Icon name='menu' />
-            </Button>
-          </Right>
+         
         </Header>
         <View style={styles.TextView}>
         <Text style={styles.IamText}>
@@ -68,13 +67,22 @@ render(){
 
 
               <View style={styles.BigView}>
+
             <View style={{flexDirection:'column'}}>
+           
+            
             <View style={[styles.ImagesViewFather,{right:50}]}>
+            <TouchableOpacity onPress={()=>this.renderSignUpTeacher()}
+            activeOpacity={0.1}
+            >
               <Image
               source={require('../../images/SignUPAs/teacher.png')}
               style={styles.Images}
               />
+                </TouchableOpacity>
+              
               </View>
+            
               <View style={styles.CardTextView}>
               <Text style={styles.TextStyle}>
                 Teacher
@@ -84,6 +92,7 @@ render(){
                 </Text>
                 </View>
                 </View>
+                
             <View style={{flexDirection:'column'}}>
                 
               <View style={[styles.ImagesViewMother,{width:'140%'}]}>
@@ -124,7 +133,7 @@ const styles=StyleSheet.create(
       fontSize:14,
       fontFamily:'Arial',
       alignSelf:'center',
-      left:'28%'
+      right:'20%'
     },
     TextView:{
         flex:0.2,
