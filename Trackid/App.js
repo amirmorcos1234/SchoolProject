@@ -14,21 +14,12 @@ import {
 import { Intro } from './src/Components/SplashScreen/intro';
 import { Start } from './src/Components/StartScreen/start';
 import { SignUpAs } from './src/Components/SignUpAs/SignUpAs';
-<<<<<<< HEAD
-import { ResetPassword } from './src/Components/ResetPassword/resetPassword';
 import { SignIn } from './src/Components/SignIn/signIn';
+// import { SignUpTeacher } from './src/Components/SignUpTeacher/signUpTeacher';
+// import { PersonalInfo } from './src/Components/SignupParent/personalInfo';
+import { ResetPassword } from './src/Components/ResetPassword/resetPassword';
 import { ResetEmail } from './src/Components/ResetPassword/resetEmail';
 import { ConfirmPassword } from './src/Components/ResetPassword/confirmPassword';
-=======
-import { SignUpTeacher } from './src/Components/SignUpTeacher/signUpTeacher';
->>>>>>> fd165ff558960163a2f957c0fa60786392eec221
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
 
 
 export default class App extends Component {
@@ -36,11 +27,7 @@ export default class App extends Component {
   componentDidMount(){
     this.switchScreen();
   }
-<<<<<<< HEAD
-  switchScreen(screen='SignIn'){
-=======
-  switchScreen(screen='Splash'){
->>>>>>> fd165ff558960163a2f957c0fa60786392eec221
+  switchScreen(screen='ConfirmPassword'){
     let appComponent=null;
     switch(screen){
     case 'Splash':
@@ -52,7 +39,6 @@ export default class App extends Component {
     case 'SignUpAs':
     appComponent=<SignUpAs switchScreen={this.switchScreen.bind(this)}/>
     break;
-<<<<<<< HEAD
     case 'ResetPassword':
     appComponent=<ResetPassword switchScreen={this.switchScreen.bind(this)}/>
     break;
@@ -64,16 +50,13 @@ export default class App extends Component {
     break;
     case 'SignIn':
     appComponent=<SignIn switchScreen={this.switchScreen.bind(this)}/>
-=======
-<<<<<<< HEAD
-    case 'personalInfo':
-    appComponent=<personalInfo switchScreen={this.switchScreen.bind(this)}/>
-=======
-    case 'SignUpTeacher':
-    appComponent=<SignUpTeacher switchScreen={this.switchScreen.bind(this)}/>
->>>>>>> 040b0aeb30261a76689163e4ab8281ffd8ac5a96
->>>>>>> fd165ff558960163a2f957c0fa60786392eec221
     break;
+    // case 'PersonalInfo':
+    // appComponent=<PersonalInfo switchScreen={this.switchScreen.bind(this)}/>
+    // break;
+    // case 'SignUpTeacher':
+    // appComponent=<SignUpTeacher switchScreen={this.switchScreen.bind(this)}/>
+    // break;
     }
 
     this.setState({renderScreen:appComponent});

@@ -6,22 +6,17 @@ export class SignIn extends Component{
     render(){
         return(
             <View>
-                  <Header transparent>
+                  <Header transparent style={{height:130}}>
                         <Left>
                             <Button transparent>
-                              <Icon name='arrow-back'style={{color:'#167ED8'}} />
+                              <Icon name='arrow-back'style={{color:'#167ED8',top:-15}} />
                             </Button>
                         </Left>
                         <Body>
-                            <Image source={require('../../images/Reset_Password/logo.png')} minHeight={74} minWidth={66} />
+                            <Image source={require('../../images/Reset_Password/logo.png')}
+                             minHeight={74} minWidth={66} style={{left:30}}/>
                         </Body>
                    </Header>
-
-
-
-
-
-
                     
                             <Item style={{justifyContent:'center',alignSelf:'center',width:270,top:30}}>
                                         <Icon  name='mail' style={{color:'#167ED8'}}></Icon>
@@ -44,11 +39,11 @@ export class SignIn extends Component{
                         </Button>
 
 
-                        <Button transparent style={{justifyContent:'center',alignSelf:'center',top:140,width:270}}>
+                        <Button transparent style={{justifyContent:'center',alignSelf:'center',top:150,width:270}}>
                             <Text style={{color:'#167ED8'}}>Don't have an account</Text>
                         </Button>
 
-                        <Button style={{alignItems:'stretch',alignContent:'stretch',alignSelf:'stretch',top:150,justifyContent:'center', backgroundColor:'#167ED8'}}>
+                        <Button style={{alignItems:'stretch',alignContent:'stretch',alignSelf:'stretch',top:160,justifyContent:'center', backgroundColor:'#167ED8'}}>
                             <Text style={{top:5}}>Sign Up</Text>
                         </Button>
             </View>

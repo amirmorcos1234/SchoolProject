@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Header, Left, Body, Right, Button, Icon, Title } from 'native-base';
-export default class HeaderIconExample extends Component {
+export default class PersonalInfo extends Component {
   render() {
     return (
       <Container>
