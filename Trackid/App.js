@@ -14,10 +14,14 @@ import {
 import { Intro } from './src/Components/SplashScreen/intro';
 import { Start } from './src/Components/StartScreen/start';
 import { SignUpAs } from './src/Components/SignUpAs/SignUpAs';
+<<<<<<< HEAD
 import { ResetPassword } from './src/Components/ResetPassword/resetPassword';
 import { SignIn } from './src/Components/SignIn/signIn';
 import { ResetEmail } from './src/Components/ResetPassword/resetEmail';
 import { ConfirmPassword } from './src/Components/ResetPassword/confirmPassword';
+=======
+import { SignUpTeacher } from './src/Components/SignUpTeacher/signUpTeacher';
+>>>>>>> fd165ff558960163a2f957c0fa60786392eec221
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -32,7 +36,11 @@ export default class App extends Component {
   componentDidMount(){
     this.switchScreen();
   }
+<<<<<<< HEAD
   switchScreen(screen='SignIn'){
+=======
+  switchScreen(screen='Splash'){
+>>>>>>> fd165ff558960163a2f957c0fa60786392eec221
     let appComponent=null;
     switch(screen){
     case 'Splash':
@@ -44,6 +52,7 @@ export default class App extends Component {
     case 'SignUpAs':
     appComponent=<SignUpAs switchScreen={this.switchScreen.bind(this)}/>
     break;
+<<<<<<< HEAD
     case 'ResetPassword':
     appComponent=<ResetPassword switchScreen={this.switchScreen.bind(this)}/>
     break;
@@ -55,8 +64,18 @@ export default class App extends Component {
     break;
     case 'SignIn':
     appComponent=<SignIn switchScreen={this.switchScreen.bind(this)}/>
+=======
+<<<<<<< HEAD
+    case 'personalInfo':
+    appComponent=<personalInfo switchScreen={this.switchScreen.bind(this)}/>
+=======
+    case 'SignUpTeacher':
+    appComponent=<SignUpTeacher switchScreen={this.switchScreen.bind(this)}/>
+>>>>>>> 040b0aeb30261a76689163e4ab8281ffd8ac5a96
+>>>>>>> fd165ff558960163a2f957c0fa60786392eec221
     break;
     }
+
     this.setState({renderScreen:appComponent});
 
   }

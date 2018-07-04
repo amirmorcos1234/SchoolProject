@@ -6,15 +6,21 @@ export class SignIn extends Component{
     render(){
         return(
             <View>
-                    <View>
-                        
-                        <Button transparent onPress={()=>this.renderStart()}  >
-                            <Icon name="arrow-round-back" style={{ color:'#167ED8'}}></Icon>
-                        </Button>
+                  <Header transparent>
+                        <Left>
+                            <Button transparent>
+                              <Icon name='arrow-back'style={{color:'#167ED8'}} />
+                            </Button>
+                        </Left>
+                        <Body>
+                            <Image source={require('../../images/Reset_Password/logo.png')} minHeight={74} minWidth={66} />
+                        </Body>
+                   </Header>
 
-                        <Image source={require('../../images/Reset_Password/logo.png')} minHeight={74} minWidth={66} style={{left:118}}/>
 
-                    </View>
+
+
+
 
                     
                             <Item style={{justifyContent:'center',alignSelf:'center',width:270,top:30}}>
@@ -43,7 +49,7 @@ export class SignIn extends Component{
                         </Button>
 
                         <Button style={{alignItems:'stretch',alignContent:'stretch',alignSelf:'stretch',top:150,justifyContent:'center', backgroundColor:'#167ED8'}}>
-                            <Text style={{top:5}}>Sign In</Text>
+                            <Text style={{top:5}}>Sign Up</Text>
                         </Button>
             </View>
                
