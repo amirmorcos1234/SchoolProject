@@ -1,6 +1,5 @@
 import React,{ Component } from "react";
 import { View,StyleSheet,Image } from "react-native";
-import { Card } from "react-native-elements";
 import { Container,Header,Content, Left, Body, Right, Title, Text, Button, Icon, Thumbnail } from "native-base";
 
 export class SignUpAs extends Component{
