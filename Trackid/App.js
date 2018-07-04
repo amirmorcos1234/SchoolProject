@@ -28,7 +28,7 @@ export default class App extends Component {
   componentDidMount(){
     this.switchScreen();
   }
-  switchScreen(screen='Splash'){
+  switchScreen(screen='SignUpAs'){
     let appComponent=null;
     switch(screen){
     case 'Splash':
