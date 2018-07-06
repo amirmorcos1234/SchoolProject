@@ -16,6 +16,8 @@ import { Start } from './src/Components/StartScreen/start';
 import { SignUpAs } from './src/Components/SignUpAs/SignUpAs';
 import { SignUpTeacher } from './src/Components/SignUpTeacher/signUpTeacher';
 import { Pinfo } from './src/Components/Parents/Pinfo';
+import { Plans } from './src/Components/Parents/Plans';
+import { Payment } from './src/Components/Parents/Payment';
 import { SignIn } from './src/Components/SignIn/signIn';
 import { ResetPassword } from './src/Components/ResetPassword/resetPassword';
 import { ResetEmail } from './src/Components/ResetPassword/resetEmail';
@@ -38,7 +40,7 @@ export default class App extends Component {
     this.switchScreen();
   }
 
-  switchScreen(screen='Pinfo'){
+  switchScreen(screen='Payment'){
 
     let appComponent=null;
     switch(screen){
@@ -53,6 +55,12 @@ export default class App extends Component {
     break;
     case 'Pinfo':
     appComponent=<Pinfo switchScreen={this.switchScreen.bind(this)}/>;
+    break;
+    case 'Plans':
+    appComponent=<Plans switchScreen={this.switchScreen.bind(this)}/>;
+    break;
+    case 'Payment':
+    appComponent=<Payment switchScreen={this.switchScreen.bind(this)}/>;
     break;
     case 'SignUpTeacher':
     appComponent=<SignUpTeacher switchScreen={this.switchScreen.bind(this)}/>;
