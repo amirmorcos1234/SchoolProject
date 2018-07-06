@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { View, StyleSheet, Image } from "react-native";
 import { Card } from "react-native-elements";
 import StepIndicator from 'react-native-step-indicator';
-import { Container, Header, Content, Left, Body, Right, Title, Text, Button, Icon, Thumbnail } from "native-base";
+//import { Container, Header, Content, Left, Body, Right, Title, Text, Button, Icon, Thumbnail } from "native-base";
+import { Container,Header,Content, Left, Body, Right, Title, Text, Button ,Item,Icon,Input,Thumbnail} from "native-base";
 
 export class Pinfo extends Component {
 
@@ -10,6 +11,7 @@ export class Pinfo extends Component {
         super();
         this.state = { currentPosition: 0 }
     }
+
     renderSignUpTeacher() {
         this.props.switchScreen('Pinfo');
     }
@@ -38,6 +40,36 @@ export class Pinfo extends Component {
                     labels={labels}
                     stepCount={4}
                 />
+            
+            <Item style={{justifyContent:'center',alignSelf:'center',width:327,top:30}}>
+                                        <Icon  name="person" style={{color:'#167ED8'}}></Icon>
+                                        <Input placeholder='User Name' placeholderTextColor='#167ED8' /> 
+                            </Item>
+            <Item style={{justifyContent:'center',alignSelf:'center',width:327,top:40}}>
+                                        <Icon  name='mail' style={{color:'#167ED8'}}></Icon>
+                                        <Input placeholder='example@abc.com' placeholderTextColor='#167ED8'/> 
+                            </Item>
+
+                            <Item style={{justifyContent:'center',alignSelf:'center',width:327,top:50}}>
+                                        <Icon  name='lock' style={{color:'#167ED8'}}></Icon>
+                                        <Input placeholder='*********' placeholderTextColor='#167ED8' style={{color:'#167ED8'}} secureTextEntry/> 
+                            </Item>
+                            <Item style={{justifyContent:'center',alignSelf:'center',width:327,top:60}}>
+                                        <Icon  name='lock' style={{color:'#167ED8'}}></Icon>
+                                        <Input placeholder='*********' placeholderTextColor='#167ED8' secureTextEntry/> 
+                            </Item>
+
+                        <Button style={{justifyContent:'center',alignSelf:'center',top:80,width:327,backgroundColor:'#167ED8'}}>
+                            <Text>Continue</Text>
+                        </Button>
+
+                        <Button transparent style={{justifyContent:'center',alignSelf:'center', top:110,width:270}}>
+                            <Text style={{color:'#167ED8'}}>Already have an account</Text>
+                        </Button>
+                        <Button style={{  alignItems:'stretch',alignContent:'stretch',alignSelf:'stretch',top:135,justifyContent:'center', backgroundColor:'#167ED8'}}>
+                            <Text style={{top:5}} >Sign In</Text>
+                        </Button>
+                    
             </Container>
 
         )
