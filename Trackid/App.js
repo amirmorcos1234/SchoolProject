@@ -21,6 +21,7 @@ import { ResetPassword } from './src/Components/ResetPassword/resetPassword';
 import { ResetEmail } from './src/Components/ResetPassword/resetEmail';
 import { ConfirmPassword } from './src/Components/ResetPassword/confirmPassword';
 import { ErrorScreen } from './src/Components/Error/errorScreen';
+import { CheckOut } from './src/Components/CheckOuT/checkout';
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
@@ -38,7 +39,7 @@ export default class App extends Component {
     this.switchScreen();
   }
 
-  switchScreen(screen='Pinfo'){
+  switchScreen(screen='CheckOut'){
 
     let appComponent=null;
     switch(screen){
@@ -71,6 +72,9 @@ export default class App extends Component {
     break;
     case 'ErrorScreen':
     appComponent=<ErrorScreen switchScreen={this.switchScreen.bind(this)}/>
+    break;
+    case 'CheckOut':
+    appComponent=<CheckOut switchScreen={this.switchScreen.bind(this)}/>
     break;
     }
 
