@@ -22,6 +22,9 @@ import { ResetEmail } from './src/Components/ResetPassword/resetEmail';
 import { ConfirmPassword } from './src/Components/ResetPassword/confirmPassword';
 import { ErrorScreen } from './src/Components/Error/errorScreen';
 import { CheckOut } from './src/Components/CheckOuT/checkout';
+import { Payment } from './src/Components/Payment/payment';
+import { Visa } from './src/Components/Payment/visa';
+import { Fawry } from './src/Components/Payment/fawry';
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
@@ -39,7 +42,7 @@ export default class App extends Component {
     this.switchScreen();
   }
 
-  switchScreen(screen='CheckOut'){
+  switchScreen(screen='Visa'){
 
     let appComponent=null;
     switch(screen){
@@ -75,6 +78,15 @@ export default class App extends Component {
     break;
     case 'CheckOut':
     appComponent=<CheckOut switchScreen={this.switchScreen.bind(this)}/>
+    break;
+    case 'Payment':
+    appComponent=<Payment switchScreen={this.switchScreen.bind(this)}/>
+    break;
+    case 'Visa':
+    appComponent=<Visa switchScreen={this.switchScreen.bind(this)}/>
+    break;
+    case 'Fawry':
+    appComponent=<Fawry switchScreen={this.switchScreen.bind(this)}/>
     break;
     }
 
