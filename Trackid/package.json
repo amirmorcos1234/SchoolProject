@@ -19,6 +19,7 @@
     "react-native-fit-image": "^1.5.4",
     "react-native-js-stepper": "^0.2.0",
     "react-native-step-indicator": "0.0.9",
+    "react-native-tabs": "^1.0.9",
     "rn-viewpager": "^1.2.9"
   },
   "devDependencies": {

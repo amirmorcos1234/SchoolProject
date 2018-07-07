@@ -12,7 +12,7 @@ export class Pinfo extends Component {
         this.state = { currentPosition: 0 }
     }
 
-    renderSignUpTeacher() {
+    renderSignUpParents() {
         this.props.switchScreen('Pinfo');
     }
 
