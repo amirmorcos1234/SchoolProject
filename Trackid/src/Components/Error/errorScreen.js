@@ -11,7 +11,7 @@ export class ErrorScreen extends Component{
 
 
                 <Text style={{color:'white',fontWeight:'bold',fontSize:25}}>ERROR</Text>
-                <Icon name="alert" style={{color:'white',top:10}}></Icon>
+                <Icon name="error" style={{color:'white',top:10}}></Icon>
                 
                 <View >
                     <Text style={{color:'white',width:250,textAlign:'center',top:20,lineHeight: 30}}>The payment didn't complete please check </Text>

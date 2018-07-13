@@ -9,7 +9,8 @@ export class ConfirmPassword extends Component{
     }
     render(){
         return(
-            <View>
+            <Container style={{backgroundColor:'white'}}>
+  <View>
                     <Header transparent style={{height:130}}>
                         <Left>
                             <Button transparent>
@@ -18,7 +19,7 @@ export class ConfirmPassword extends Component{
                         </Left>
                         <Body>
                             <Image source={require('../../images/Reset_Password/logo.png')}
-                             minHeight={74} minWidth={66} style={{left:30}}/>
+                             minHeight={74} minWidth={83} style={{left:30}}/>
                         </Body>
                    </Header>
                             <Text style={{justifyContent:'center',textAlign:'center',alignItems:'center',color:'#167ED8',top:30}}>Enter your new password and confirm it</Text>
@@ -47,6 +48,8 @@ export class ConfirmPassword extends Component{
                         </Button>
             </View>
                
+            </Container>
+          
 
             
         )

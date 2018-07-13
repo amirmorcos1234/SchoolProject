@@ -1,0 +1,24 @@
+{
+  "name": "path",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "56cf5ab9d199143f4a90395678fd83f9",
+      "css": "path102",
+      "code": 59392,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M0 875H1000V1000H0ZM0 437.5H1000V750H0ZM437.5 0H1000V312.5H437.5ZM0 0H312.5V312.5H0Z",
+        "width": 1000
+      },
+      "search": [
+        "path102"
+      ]
+    }
+  ]
+}

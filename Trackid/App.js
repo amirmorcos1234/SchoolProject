@@ -16,37 +16,41 @@ import { Start } from './src/Components/StartScreen/start';
 import { SignUpAs } from './src/Components/SignUpAs/SignUpAs';
 import { SignUpTeacher } from './src/Components/SignUpTeacher/signUpTeacher';
 import { Pinfo } from './src/Components/Parents/Pinfo';
-import { Plans } from './src/Components/Parents/Plans';
-import { Payment } from './src/Components/Parents/Payment';
 import { SignIn } from './src/Components/SignIn/signIn';
 import { ResetPassword } from './src/Components/ResetPassword/resetPassword';
 import { ResetEmail } from './src/Components/ResetPassword/resetEmail';
 import { ConfirmPassword } from './src/Components/ResetPassword/confirmPassword';
 import { ErrorScreen } from './src/Components/Error/errorScreen';
 import { CheckOut } from './src/Components/CheckOuT/checkout';
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
+import { Payment } from './src/Components/Payment/payment';
+import { Visa } from './src/Components/Payment/visa';
+import { Fawry } from './src/Components/Payment/fawry';
+import { MainNewsFeed } from './src/Components/NewsFeed/SchoolAdmen/MainNewsFeed';
+import { Content, Container,Footer,FooterTab } from 'native-base';
+import { NewsFeed } from './src/Components/NewsFeed/SchoolAdmen/NewsFeed';
 
 
 
 
 export default class App extends Component {
+  
   state={renderScreen:null};
   componentDidMount(){
     this.switchScreen();
   }
 
+<<<<<<< HEAD
 
 
   switchScreen(screen='Pinfo'){
 
+=======
+  switchScreen(screen='MainNewsFeed'){
+>>>>>>> 016deb92cc6604fd9221ae937cea6fb9e58d3579
 
     let appComponent=null;
+    let active;
+
     switch(screen){
     case 'Splash':
     appComponent=<Intro switchScreen={this.switchScreen.bind(this)}/>;
@@ -59,12 +63,6 @@ export default class App extends Component {
     break;
     case 'Pinfo':
     appComponent=<Pinfo switchScreen={this.switchScreen.bind(this)}/>;
-    break;
-    case 'Plans':
-    appComponent=<Plans switchScreen={this.switchScreen.bind(this)}/>;
-    break;
-    case 'Payment':
-    appComponent=<Payment switchScreen={this.switchScreen.bind(this)}/>;
     break;
     case 'SignUpTeacher':
     appComponent=<SignUpTeacher switchScreen={this.switchScreen.bind(this)}/>;
@@ -87,6 +85,21 @@ export default class App extends Component {
     case 'CheckOut':
     appComponent=<CheckOut switchScreen={this.switchScreen.bind(this)}/>
     break;
+    case 'Payment':
+    appComponent=<Payment switchScreen={this.switchScreen.bind(this)}/>
+    break;
+    case 'Visa':
+    appComponent=<Visa switchScreen={this.switchScreen.bind(this)}/>
+    break;
+    case 'Fawry':
+    appComponent=<Fawry switchScreen={this.switchScreen.bind(this)}/>
+    break;
+    case 'MainNewsFeed':
+    appComponent=<MainNewsFeed switchScreen={this.switchScreen.bind(this)}/>
+    break;
+    case 'NewsFeed':
+    appComponent=<NewsFeed switchScreen={this.switchScreen.bind(this)}/>
+    break;
     }
 
     this.setState({renderScreen:appComponent});
@@ -94,7 +107,7 @@ export default class App extends Component {
   }
   render() {
     return (
-      this.state.renderScreen
+        this.state.renderScreen
     );
   }
 }
@@ -115,5 +128,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
+  },backgroundBar:{
+    backgroundColor:'#A310A5',
   },
+ headerColor:{
+  backgroundColor:'#F1E4F0',
+  height:120
+ }
+
 });
