@@ -41,11 +41,10 @@ export default class App extends Component {
     this.switchScreen();
   }
 
-<<<<<<< HEAD
-  switchScreen(screen='Payment'){
-=======
-  switchScreen(screen='CheckOut'){
->>>>>>> c4f10ed1b505868297de9864f73b294c20d86bdc
+
+
+  switchScreen(screen='Pinfo'){
+
 
     let appComponent=null;
     switch(screen){
