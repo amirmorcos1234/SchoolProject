@@ -1,28 +1,49 @@
 import React,{ Component } from "react";
-import { View,StyleSheet,Image,TouchableOpacity } from "react-native";
-import { Container,Header,Content, Left, Body, Right, Title, Text, Button, Icon, Thumbnail } from "native-base";
+import { View,StyleSheet,Image,TouchableOpacity,ScrollView } from "react-native";
+import { Container,Header,Content, Left, Body, Right, Title, Text, Button, Icon, Thumbnail, Item, Input, Card, CardItem } from "native-base";
 
-export class Kids extends Component{
- renderTeachers(){
-   this.props.switchScreen('KidsTeachers');
- }
+export class KidsTeachers extends Component{
+ 
 render(){
     return(
-    <Container
-    style={{backgroundColor:'white'}}
-    >
-        <Header transparent>
-          <Left>
-            <Button transparent >
-              <Icon name='arrow-back' style={styles.IconColor} />
-            </Button>
-          </Left>
-          <Body>
-            <Title style={[styles.IconColor,styles.Title]}>Sign up As?</Title>
-          </Body>
-         
+        <Container>
+        <Header searchBar rounded>
+          <Item>
+            <Icon name="ios-search" />
+            <Input placeholder="Search" />
+            <Icon name="ios-people" />
+          </Item>
+          <Button transparent>
+            <Text>Search</Text>
+          </Button>
         </Header>
-        <View style={styles.TextView}>
+        <ScrollView>
+        <Content>
+          <Card style={{backgroundColor:'orange'}}>
+            <CardItem header>
+            <View style={{flexDirection:'row'}}>
+            <Button rounded light>
+            <Icon name='person' style={styles.IconColor}/>
+          </Button>
+          <View style={{flexDirection:'column',left:'60%'}}>
+          <Text>
+              Mr.ahmed Ali
+              </Text>
+              <Text>
+                  Tameem's physics Teacher
+                  </Text>
+              </View>
+              
+          </View>
+           
+            </CardItem>
+           
+         </Card>
+        </Content>
+            </ScrollView>
+      </Container>
+      
+        /* <View style={styles.TextView}>
         <Text style={styles.IamText}>
             I Am a
             </Text>
@@ -71,7 +92,7 @@ render(){
            
             
             <View style={[styles.ImagesViewFather,{right:50}]}>
-            <TouchableOpacity onPress={()=>this.renderTeachers}
+            <TouchableOpacity onPress={()=>this.renderSignUpTeacher()}
             activeOpacity={0.1}
             >
               <Image
@@ -109,14 +130,18 @@ render(){
                 </Text>
                 </View>
               </View>
-              </View>
+              </View> */
 
-      </Container>
+    //   </Container>
     )
 }
 }
 const styles=StyleSheet.create(
     {
+        IconColor:{
+            backgroundColor:'#2699FB',
+            color:'white'
+        },
     IconColor:{
         color:'#2699FB',
        

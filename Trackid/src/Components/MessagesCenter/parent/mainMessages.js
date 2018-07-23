@@ -1,10 +1,11 @@
 import StepIndicator from 'react-native-step-indicator';
 import React,{ Component } from "react";
-import { View,StyleSheet,Image,TextInput,ScrollView} from "react-native";
+import { View,StyleSheet,Image,TextInput,ScrollView,TouchableOpacity} from "react-native";
 import {Header,Content, Left, Body,Label,DatePicker,CheckBox, Footer,FooterTab,Right, Title, Text,Icon, Button ,Item,Input, Card, CardItem, Container, Thumbnail} from "native-base";
 // import Icon from 'react-native-vector-icons';
 import { RecentMessages } from './recentMessages';
 import { Kids } from './kids';
+import {KidsTeachers  } from "./KidsTeachers";
 export class MainMessages extends Component{
     activeTab=null;
     colors=[false,false,false];
@@ -15,7 +16,7 @@ export class MainMessages extends Component{
     componentWillMount(){
         this.switchScreen();
       }
-      switchScreen(screen='Kids'){
+      switchScreen(screen='KidsTeachers'){
         let appComponent=null;
         let active;
         switch(screen){
@@ -32,6 +33,13 @@ export class MainMessages extends Component{
           this.setState({title:'Kids'});
           active='Kids';
           break;
+         case 'KidsTeachers':
+          this.appComponent=<KidsTeachers switchScreen={this.switchScreen.bind(this)}/>;
+          this.colors=[false,true,false];
+          this.setState({title:'Tameem Teachers'});
+          active='Kids';
+          break;
+
         //   case 'Search':  
         //   this.appComponent=<Search switchScreen={this.switchScreen.bind(this)}/>;
         //   this.colors=[false,false,true,false];
