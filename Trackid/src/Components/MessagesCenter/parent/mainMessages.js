@@ -5,7 +5,12 @@ import {Header,Content, Left, Body,Label,DatePicker,CheckBox, Footer,FooterTab,R
 // import Icon from 'react-native-vector-icons';
 import { RecentMessages } from './recentMessages';
 import { Kids } from './kids';
+<<<<<<< HEAD
 import {KidsTeachers  } from "./KidsTeachers";
+=======
+import {Contacts} from './contacts';
+import {Chat} from './chat';
+>>>>>>> 7444baa25dca2e80a66acc6d8764abdc43f5505b
 export class MainMessages extends Component{
     activeTab=null;
     colors=[false,false,false];
@@ -33,6 +38,7 @@ export class MainMessages extends Component{
           this.setState({title:'Kids'});
           active='Kids';
           break;
+<<<<<<< HEAD
          case 'KidsTeachers':
           this.appComponent=<KidsTeachers switchScreen={this.switchScreen.bind(this)}/>;
           this.colors=[false,true,false];
@@ -53,6 +59,15 @@ export class MainMessages extends Component{
         //   this.setState({title:'PROFILE'});
         //   active='Profile';
         //   break;
+=======
+       
+          case 'Contacts':  
+          this.appComponent=<Contacts switchScreen={this.switchScreen.bind(this)}/>;
+          this.colors=[false,false,true];
+          this.setState({title:'Contacts'});
+          active='Contacts';
+          break;
+>>>>>>> 7444baa25dca2e80a66acc6d8764abdc43f5505b
         }
         this.activeTab=active;
         
@@ -95,11 +110,11 @@ export class MainMessages extends Component{
             </Button> 
 
 
-            {/* <Button active={this.activeTab==='Search'}
+            <Button active={this.activeTab==='Contacts'}
             style={styles.backgroundBar}
-             onPress={()=>this.switchScreen('Search')}>
-              <Icon  name="search" style={{color:this.colors[2]?'white':'#F1F9FF',width:22,height:22}}/>
-            </Button>  */}
+             onPress={()=>this.switchScreen('Contacts')}>
+              <Icon  name="person" style={{color:this.colors[2]?'white':'#F1F9FF',width:22,height:22}}/>
+            </Button> 
           </FooterTab>
         </Footer>
             </Container>

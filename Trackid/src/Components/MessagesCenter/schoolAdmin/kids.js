@@ -1,15 +1,9 @@
 import React,{ Component } from "react";
 import { View,StyleSheet,Image,TouchableOpacity } from "react-native";
-<<<<<<< HEAD
-import { Container,Header,Content, Left, Body, Right, Title, Text, Button, Icon, Thumbnail } from "native-base";
-=======
 import { Container,Header,Content, Left, Body, Right, Title, Text, Button, Icon, Thumbnail,Item,Input } from "native-base";
->>>>>>> 7444baa25dca2e80a66acc6d8764abdc43f5505b
 
 export class Kids extends Component{
- renderTeachers(){
-   this.props.switchScreen('KidsTeachers');
- }
+ 
 render(){
     return(
     <Container style={{backgroundColor:'white',width:295,left:10,right:10}}>
@@ -22,28 +16,26 @@ render(){
             <View style={[styles.BigView,{top:15}]}>
             <View style={{flexDirection:'column'}}>
             <View style={[styles.ImagesViewFather,{right:50}]}>
-              <Image
-              source={require('../../../images/SignUPAs/father.png')}
-              style={styles.Images}
-              />
+              <Text style={{fontSize:77,fontWeight:'bold',color:'white'}}>3A</Text>
               </View>
               <View style={styles.CardTextView}>
               <Text style={styles.TextStyle}>
-                Ahmed
+              Class 3A
+               
                 </Text>
                 </View>
                 </View>
             <View style={{flexDirection:'column'}}>
                 
               <View style={[styles.ImagesViewMother,{width:'130%'}]}>
-              <Image
-               source={require('../../../images/SignUPAs/father.png')}
-              style={styles.Images}
-              />
+              <Text style={{fontSize:77,fontWeight:'bold',color:'white'}}>3A</Text>
+              
+              
               </View>
               <View style={styles.CardTextView}>
               <Text style={[styles.TextStyle,styles.RightCardsStyle]}>
-                Tameem
+              Class 3A
+              
                 </Text>
                
                 </View>
@@ -54,46 +46,35 @@ render(){
   <View style={[styles.BigView,{top:15}]}>
             <View style={{flexDirection:'column'}}>
             <View style={[styles.ImagesViewFather,{right:50}]}>
-<<<<<<< HEAD
-            <TouchableOpacity onPress={()=>this.renderTeachers}
-            activeOpacity={0.1}
-            >
-=======
->>>>>>> 7444baa25dca2e80a66acc6d8764abdc43f5505b
-              <Image
-              source={require('../../../images/SignUPAs/father.png')}
-              style={styles.Images}
-              />
+            <Text style={{fontSize:77,fontWeight:'bold',color:'white'}}>3A</Text>
+
               </View>
               <View style={styles.CardTextView}>
               <Text style={styles.TextStyle}>
-                Rokaia
+              Class 3A
+                
                 </Text>
                 </View>
                 </View>
             <View style={{flexDirection:'column'}}>
                 
               <View style={[styles.ImagesViewMother,{width:'130%'}]}>
-              <Image
-               source={require('../../../images/SignUPAs/father.png')}
-              style={styles.Images}
-              />
+              <Text style={{fontSize:77,fontWeight:'bold',color:'white'}}>3A</Text>
+
               </View>
               <View style={styles.CardTextView}>
               <Text style={[styles.TextStyle,styles.RightCardsStyle]}>
-                Ali
+              Class 3A
+                
                 </Text>
                
                 </View>
               </View>
 
 
-<<<<<<< HEAD
-=======
             
        </View>
 
->>>>>>> 7444baa25dca2e80a66acc6d8764abdc43f5505b
       </Container>
     )
 }
