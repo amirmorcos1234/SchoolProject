@@ -16,28 +16,26 @@ render(){
             <View style={[styles.BigView,{top:15}]}>
             <View style={{flexDirection:'column'}}>
             <View style={[styles.ImagesViewFather,{right:50}]}>
-              <Image
-              source={require('../../../images/SignUPAs/father.png')}
-              style={styles.Images}
-              />
+              <Text style={{fontSize:77,fontWeight:'bold',color:'white'}}>3A</Text>
               </View>
               <View style={styles.CardTextView}>
               <Text style={styles.TextStyle}>
-                Ahmed
+              Class 3A
+               
                 </Text>
                 </View>
                 </View>
             <View style={{flexDirection:'column'}}>
                 
               <View style={[styles.ImagesViewMother,{width:'130%'}]}>
-              <Image
-               source={require('../../../images/SignUPAs/father.png')}
-              style={styles.Images}
-              />
+              <Text style={{fontSize:77,fontWeight:'bold',color:'white'}}>3A</Text>
+              
+              
               </View>
               <View style={styles.CardTextView}>
               <Text style={[styles.TextStyle,styles.RightCardsStyle]}>
-                Tameem
+              Class 3A
+              
                 </Text>
                
                 </View>
@@ -48,28 +46,26 @@ render(){
   <View style={[styles.BigView,{top:15}]}>
             <View style={{flexDirection:'column'}}>
             <View style={[styles.ImagesViewFather,{right:50}]}>
-              <Image
-              source={require('../../../images/SignUPAs/father.png')}
-              style={styles.Images}
-              />
+            <Text style={{fontSize:77,fontWeight:'bold',color:'white'}}>3A</Text>
+
               </View>
               <View style={styles.CardTextView}>
               <Text style={styles.TextStyle}>
-                Rokaia
+              Class 3A
+                
                 </Text>
                 </View>
                 </View>
             <View style={{flexDirection:'column'}}>
                 
               <View style={[styles.ImagesViewMother,{width:'130%'}]}>
-              <Image
-               source={require('../../../images/SignUPAs/father.png')}
-              style={styles.Images}
-              />
+              <Text style={{fontSize:77,fontWeight:'bold',color:'white'}}>3A</Text>
+
               </View>
               <View style={styles.CardTextView}>
               <Text style={[styles.TextStyle,styles.RightCardsStyle]}>
-                Ali
+              Class 3A
+                
                 </Text>
                
                 </View>

@@ -5,6 +5,8 @@ import {Header,Content, Left, Body,Label,DatePicker,CheckBox, Footer,FooterTab,R
 // import Icon from 'react-native-vector-icons';
 import { RecentMessages } from './recentMessages';
 import { Kids } from './kids';
+import {Contacts} from './contacts';
+import {Chat} from './chat';
 export class MainMessages extends Component{
     activeTab=null;
     colors=[false,false,false];
@@ -32,19 +34,13 @@ export class MainMessages extends Component{
           this.setState({title:'Kids'});
           active='Kids';
           break;
-        //   case 'Search':  
-        //   this.appComponent=<Search switchScreen={this.switchScreen.bind(this)}/>;
-        //   this.colors=[false,false,true,false];
-        //   this.setState({title:'SEARCH'});
-        //   active='Search';
-        //   break;
-
-        //   case 'Profile':  
-        //   this.appComponent=<Profile switchScreen={this.switchScreen.bind(this)}/>;
-        //   this.colors=[false,false,false,true];
-        //   this.setState({title:'PROFILE'});
-        //   active='Profile';
-        //   break;
+       
+          case 'Contacts':  
+          this.appComponent=<Contacts switchScreen={this.switchScreen.bind(this)}/>;
+          this.colors=[false,false,true];
+          this.setState({title:'Contacts'});
+          active='Contacts';
+          break;
         }
         this.activeTab=active;
         
@@ -87,11 +83,11 @@ export class MainMessages extends Component{
             </Button> 
 
 
-            {/* <Button active={this.activeTab==='Search'}
+            <Button active={this.activeTab==='Contacts'}
             style={styles.backgroundBar}
-             onPress={()=>this.switchScreen('Search')}>
-              <Icon  name="search" style={{color:this.colors[2]?'white':'#F1F9FF',width:22,height:22}}/>
-            </Button>  */}
+             onPress={()=>this.switchScreen('Contacts')}>
+              <Icon  name="person" style={{color:this.colors[2]?'white':'#F1F9FF',width:22,height:22}}/>
+            </Button> 
           </FooterTab>
         </Footer>
             </Container>
