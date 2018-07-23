@@ -1,10 +1,6 @@
 import React,{ Component } from "react";
 import { View,StyleSheet,Image,TouchableOpacity } from "react-native";
-<<<<<<< HEAD
-import { Container,Header,Content, Left, Body, Right, Title, Text, Button, Icon, Thumbnail } from "native-base";
-=======
 import { Container,Header,Content, Left, Body, Right, Title, Text, Button, Icon, Thumbnail,Item,Input } from "native-base";
->>>>>>> 7444baa25dca2e80a66acc6d8764abdc43f5505b
 
 export class Kids extends Component{
  renderTeachers(){
@@ -54,12 +50,6 @@ render(){
   <View style={[styles.BigView,{top:15}]}>
             <View style={{flexDirection:'column'}}>
             <View style={[styles.ImagesViewFather,{right:50}]}>
-<<<<<<< HEAD
-            <TouchableOpacity onPress={()=>this.renderTeachers}
-            activeOpacity={0.1}
-            >
-=======
->>>>>>> 7444baa25dca2e80a66acc6d8764abdc43f5505b
               <Image
               source={require('../../../images/SignUPAs/father.png')}
               style={styles.Images}
@@ -88,12 +78,9 @@ render(){
               </View>
 
 
-<<<<<<< HEAD
-=======
             
        </View>
 
->>>>>>> 7444baa25dca2e80a66acc6d8764abdc43f5505b
       </Container>
     )
 }

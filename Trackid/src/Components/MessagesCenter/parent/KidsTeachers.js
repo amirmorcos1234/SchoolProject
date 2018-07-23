@@ -7,11 +7,11 @@ export class KidsTeachers extends Component{
 render(){
     return(
         <Container>
-        <Header searchBar rounded>
+        <Header searchBar  transparent>
           <Item>
-            <Icon name="ios-search" />
             <Input placeholder="Search" />
-            <Icon name="ios-people" />
+            <Icon name="ios-search" />
+            
           </Item>
           <Button transparent>
             <Text>Search</Text>
@@ -19,10 +19,10 @@ render(){
         </Header>
         <ScrollView>
         <Content>
-          <Card style={{backgroundColor:'orange'}}>
+          <Card  style={styles.card} >
             <CardItem header>
             <View style={{flexDirection:'row'}}>
-            <Button rounded light>
+            <Button rounded light style={{backgroundColor:'#2699FB'}}>
             <Icon name='person' style={styles.IconColor}/>
           </Button>
           <View style={{flexDirection:'column',left:'60%'}}>
@@ -139,13 +139,13 @@ render(){
 const styles=StyleSheet.create(
     {
         IconColor:{
-            backgroundColor:'#2699FB',
-            color:'white'
+             backgroundColor:'#2699FB',
+            color:'#FFFFFF'
         },
-    IconColor:{
-        color:'#2699FB',
-       
-    },
+        card:{
+            backgroundColor:'black',
+            top:'20%'
+        },
     Title:{
       fontWeight:'bold',
       fontSize:14,
