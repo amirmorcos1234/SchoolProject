@@ -12,7 +12,7 @@ export class Search extends Component{
             'Emre Can'
           ];
         return(
-            <Content style={{backgroundColor:'white',alignSelf:'center',width:300}}>
+            <Content style={{backgroundColor:'white',alignSelf:'center',width:300,flex:1}}>
              <Item regular style={{borderColor:'#7FC4FD'}}> 
                 <Input style={{color:'#2699FB',borderColor:'#7FC4FD',height:40}} placeholderTextColor='#2699FB' placeholder='type here ...' />
                 <Icon active style={{color:'#2699FB'}} minHeight={15} minWidth={15} name='search' />
