@@ -28,8 +28,8 @@ import { Fawry } from './src/Components/Payment/fawry';
 import { MainNewsFeed } from './src/Components/NewsFeed/SchoolAdmen/MainNewsFeed';
 import { Content, Container,Footer,FooterTab } from 'native-base';
 import { NewsFeed } from './src/Components/NewsFeed/SchoolAdmen/NewsFeed';
-
-
+import { SearchedProfile } from './src/Components/NewsFeed/Parent/SearchedProfile';
+import { SearchedProfileStruc } from './src/Components/NewsFeed/Parent/SearchedProfileStruc';
 
 
 export default class App extends Component {
@@ -39,14 +39,8 @@ export default class App extends Component {
     this.switchScreen();
   }
 
-<<<<<<< HEAD
 
-
-  switchScreen(screen='Pinfo'){
-
-=======
-  switchScreen(screen='MainNewsFeed'){
->>>>>>> 016deb92cc6604fd9221ae937cea6fb9e58d3579
+  switchScreen(screen='SignIn'){
 
     let appComponent=null;
     let active;
@@ -96,6 +90,9 @@ export default class App extends Component {
     break;
     case 'MainNewsFeed':
     appComponent=<MainNewsFeed switchScreen={this.switchScreen.bind(this)}/>
+    break;
+    case 'SearchedProfile':
+    appComponent=<SearchedProfile switchScreen={this.switchScreen.bind(this)}/>
     break;
     case 'NewsFeed':
     appComponent=<NewsFeed switchScreen={this.switchScreen.bind(this)}/>
