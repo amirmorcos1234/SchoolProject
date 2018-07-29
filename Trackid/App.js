@@ -26,10 +26,28 @@ import { Payment } from './src/Components/Payment/payment';
 import { Visa } from './src/Components/Payment/visa';
 import { Fawry } from './src/Components/Payment/fawry';
 import { MainNewsFeed } from './src/Components/NewsFeed/SchoolAdmen/MainNewsFeed';
+// import { MainNewsFeed } from './src/Components/NewsFeed/Parent/MainNewsFeed';
+// import { MainNewsFeed } from './src/Components/NewsFeed/Teacher/MainNewsFeed';
+import {MainMessages} from './src/Components/MessagesCenter/parent/mainMessages';
+// import {MainMessages} from './src/Components/MessagesCenter/Teacher/mainMessages';
+// import {MainMessages} from './src/Components/MessagesCenter/SchoolAdmin/mainMessages';
 import { Content, Container,Footer,FooterTab } from 'native-base';
+<<<<<<< HEAD
 import { NewsFeed } from './src/Components/NewsFeed/SchoolAdmen/NewsFeed';
 import { SearchedProfile } from './src/Components/NewsFeed/Parent/SearchedProfile';
 import { SearchedProfileStruc } from './src/Components/NewsFeed/Parent/SearchedProfileStruc';
+=======
+import { RecentMessages } from './src/Components/MessagesCenter/parent/recentMessages';
+// import { RecentMessages } from './src/Components/MessagesCenter/parent/recentMessages';
+// import { RecentMessages } from './src/Components/MessagesCenter/SchoolAdmin/recentMessages';
+// import { RecentMessages } from './src/Components/MessagesCenter/Teacher/recentMessages';
+// import { NewsFeed } from './src/Components/NewsFeed/SchoolAdmen/NewsFeed';
+// import { NewsFeed } from './src/Components/NewsFeed/Teacher/NewsFeed';
+// import { NewsFeed } from './src/Components/NewsFeed/Parent/NewsFeed';
+
+
+
+>>>>>>> 15e6f31bbe7f2b04d83fc1eefb7c83af885307fe
 
 
 export default class App extends Component {
@@ -39,8 +57,12 @@ export default class App extends Component {
     this.switchScreen();
   }
 
+<<<<<<< HEAD
 
   switchScreen(screen='SignIn'){
+=======
+  switchScreen(screen='MainMessages'){
+>>>>>>> 15e6f31bbe7f2b04d83fc1eefb7c83af885307fe
 
     let appComponent=null;
     let active;
@@ -97,6 +119,12 @@ export default class App extends Component {
     case 'NewsFeed':
     appComponent=<NewsFeed switchScreen={this.switchScreen.bind(this)}/>
     break;
+    case 'MainMessages':
+    appComponent=<MainMessages switchScreen={this.switchScreen.bind(this)}/>
+    break;
+    // case 'RecentMessages':
+    // appComponent=<RecentMessages switchScreen={this.switchScreen.bind(this)}/>
+    // break;
     }
 
     this.setState({renderScreen:appComponent});
